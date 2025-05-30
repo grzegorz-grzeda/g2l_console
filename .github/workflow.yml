@@ -1,0 +1,27 @@
+name: Build CMake Project
+
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install CMake and GCC
+        run: sudo apt-get update && sudo apt-get install -y build-essential cmake
+
+      - name: Configure with CMake
+        run: cmake -S . -B build
+
+      - name: Build with CMake
+        run: cmake --build build
+
+      - name: List build output
+        run: ls -l build
