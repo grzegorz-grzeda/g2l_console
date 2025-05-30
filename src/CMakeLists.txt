@@ -20,9 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 #
-cmake_minimum_required(VERSION 3.25)
-project(g2l_console LANGUAGES C)
-
-add_executable(${PROJECT_NAME})
-
-add_subdirectory(src)
+target_sources(${PROJECT_NAME}
+    PRIVATE main.c
+)
