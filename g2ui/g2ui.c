@@ -21,12 +21,3 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#include <stdio.h>
-#include "g2ui.h"
-
-int main(int argc, char* argv[]) {
-    // Print a greeting message using the provided name
-    printf("Hello, %s!\n", argv[1]);
-
-    return 0;
-}

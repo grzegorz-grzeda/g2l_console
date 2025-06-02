@@ -20,14 +20,15 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 #
-cmake_minimum_required(VERSION 3.25)
-project(g2l_console LANGUAGES C)
+project(g2ui C)
 
-add_executable(${PROJECT_NAME})
+add_library(${PROJECT_NAME} STATIC)
 
-add_subdirectory(src)
-add_subdirectory(g2vl)
+target_sources(${PROJECT_NAME}
+    PRIVATE
+    g2ui.c
+)
 
-target_link_libraries(${PROJECT_NAME}
-    PRIVATE g2vl
+target_include_directories(${PROJECT_NAME}
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
