@@ -26,8 +26,8 @@ project(g2l_console LANGUAGES C)
 add_executable(${PROJECT_NAME})
 
 add_subdirectory(src)
-add_subdirectory(g2vl)
+add_subdirectory(g2ui)
 
 target_link_libraries(${PROJECT_NAME}
-    PRIVATE g2vl
+    PRIVATE g2ui
 )
